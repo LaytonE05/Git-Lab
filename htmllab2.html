@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+    
+    
+
+
+
+
+<h1>HTML Lab - Part 2</h1>
+<p>In this exercise, you will create two webpages by following the directions provided.</p><p>The Model Bakery’s English Muffins</p><p>We will create a HTML webpage that features a recipe for a popular bakery’s English Muffin.</p><p>First start by creating a starting HTML document by going into Visual Studio Code, creating a new file called muffins.html and saving the file.
+Then start with the following (or use the macro ! then hit tab, then change the title):</p><p><h3><code>&lt;!DOCTYPE html&gt;</code></h3>
+<h3><code>&lt;html lang=&quot;en&quot;&gt;</code></h3>
+<h3><code>&lt;head&gt;</code></h3>
+<h3><code>   &lt;meta charset=&quot;UTF-8&quot;&gt;</code></h3>
+<h3><code>    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></h3>
+<h3><code>    &lt;title&gt;Model Bakery’s English Muffins&lt;/title&gt;</code></h3>
+<h3><code>&lt;/head&gt;</code></h3>
+<h3><code>&lt;body&gt;</code></h3>
+<h3><code>&lt;/body&gt;</code></h3>
+<h3><code>&lt;/html&gt;</code></h3>
+<p>The recipe starts with making a starter. This is called <em>biga</em>. Biga is a type of pre-fermentation used in Italian baking. Many popular Italian breads, including ciabatta, are made using a biga. Using a biga adds complexity to the bread&#39;s flavor and is often used in breads that need a light, open texture with holes.
+We will put this into the webpage first.</p>
+<p>BIGA</p><p>1/2 cup/75 g bread flour</p><p>1/4 cup/60 ml water</p><p>3/4 tsp instant (also called quick-rising or bread machine) yeast</p><p>If you look at the structure, you see we have an unnumbered list. This is called an unordered list in HTML. It needs two tags, a <code>&lt;ul&gt;</code> to start the list, and <code>&lt;li&gt;</code> for each list item.</p><p>In the body add:</p><p><h3><code>&lt;p&gt;Biga&lt;/p&gt;</code></h3>
+<h3><code>&lt;ul&gt;</code></h3>
+<h3><code>&lt;li&gt;1/2 cup/75 g bread flour&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;1/4 cup/60 ml water&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;3/4 tsp instant (also called quick-rising or bread machine) yeast&lt;/li&gt;</code></h3>
+<h3><code>&lt;/ul&gt;</code></h3>
+
+<p>Notice we get bullet point for each list item. We will learn to change this in CSS later.
+Many recipes use fractions, and this one is no different. We have many ways to show 1/2 or &#189; cup. We can use 1 divided by 2 (1 / 2) or some fonts have premade fractions like one-half (&#189;). In HTML there are special escape characters for different text characters.</p><p>&#189; - Using the symbol <code>&amp;frac12;</code> places a &#189; fraction as a character in HTML. Change the first line of the Biga recipe to</p><p><h3><code>&lt;li&gt;&amp;frac12;  cup/75 g bread flour&lt;/li&gt;</code></h3>
+
+<p>&#188; - Using the symbol <code>&amp;frac14;</code> places a &#188; fraction as a character in HTML. Change the second and third line of the Biga recipe to</p><p><h3><code>&lt;li&gt;&amp;frac14;  cup/60 ml water&lt;/li&gt;</code></h3>
+
+<p><h3><code>&lt;li&gt;&amp;frac34;  tsp instant (also called quick-rising or bread machine) yeast&lt;/li&gt;</code></h3>
+
+<p>&#190; - There is also the premade fraction for &#190;, but after this, fractions must be made with a different process.</p><p>⁄ - The <code>&amp;frasl;</code> command is a nice formatted slash used for fractions. You can do <code>1&amp;frasl;2</code> to get &#189;. Change the first line to use the <code>&amp;frasl;</code> command.</p><p>Include both ways to see the difference.</p><p><h3><code>&lt;li&gt;&amp;frac12;  1&amp;frasl;2  cup/75 g bread flour&lt;/li&gt;</code></h3>
+
+<p>The bottom of the 2 looks to be very light. Where the first fraction was drawn by a font artist, the second one was just computer generated. Another step is needed to get the best result.</p><p><code>&lt;sup&gt;</code> and <code>&lt;sub&gt;</code> tags - If we use the <code>&lt;sup&gt;</code> superscript and <code>&lt;sub&gt;</code> subscript tag for the numerator and denominator, in addition to the slash fraction, this allows a proper way to make all fractions. Change the line to:</p><p><h3><code>&lt;li&gt;&amp;frac12;  1&amp;frasl;2 &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; cup/75 g bread flour&lt;/li&gt;</code></h3>
+
+<p>Check your work. Then change all the fractions to use the <code>&lt;sup&gt;</code> and <code>&lt;sub&gt;</code> tags. Your document should look like this:</p><p><h3><code>&lt;html&gt;</code></h3>
+<h3><code>&lt;head&gt;</code></h3>
+<h3><code>&lt;title&gt;Model Bakery’s English Muffins&lt;/title&gt;</code></h3>
+<h3><code>&lt;/head&gt;</code></h3>
+<h3><code>&lt;body&gt;</code></h3>
+<h3><code>    &lt;p&gt;Biga&lt;/p&gt;</code></h3>
+<h3><code>&lt;ul&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; cup/75 g bread flour&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt; cup/60 ml water&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt; tsp instant (also called quick-rising or bread machine) yeast&lt;/li&gt;</code></h3>
+<h3><code>&lt;/ul&gt;</code></h3>
+<h3><code>&lt;/body&gt;</code></h3>
+<h3><code>&lt;/html&gt;</code></h3>
+
+<p>Next add the dough portion of the recipe.</p><p>DOUGH</p><p>1 1/3 cups/315 ml water</p><p>3/4 tsp instant (also called quick-rising or bread machine) yeast</p><p>1 Tbsp plus 1 tsp extra-virgin olive oil</p><p>1 1/2 tsp fine sea salt</p><p>3 1/2 cups/510 g unbleached all-purpose flour, as needed</p><p>1/4 cup/35g yellow cornmeal, preferably stone-ground</p><p>6 Tbsp/90 ml melted Clarified Butter, as needed</p><p><h3><code>&lt;p&gt;Dough&lt;/p&gt;</code></h3>
+<h3><code>&lt;ul&gt;</code></h3>
+<h3><code>&lt;li&gt;1 &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; cups/315 ml water&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt; tsp instant (also called quick-rising or bread machine) yeast&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;1 Tbsp plus 1 tsp extra-virgin olive oil&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;1 &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; tsp fine sea salt&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;3 &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; cups/510 g unbleached all-purpose flour, as needed&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt; cup/35g yellow cornmeal, preferably stone-ground&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;6 Tbsp/90 ml melted Clarified Butter, as needed&lt;/li&gt;</code></h3>
+<h3><code>&lt;/ul&gt;</code></h3>
+
+<p>Look and fix any errors you might have. Check the title bar of the webpage page out. Does it look funny? This is because the apostrophe in Bakery’s needs an escape character.</p><p>A single quote such as <code>&amp;rsquo;</code> will work so fix the title to:</p><p><h3><code>&lt;title&gt;Model Bakery&amp;rsquo;s English Muffins&lt;/title&gt;</code></h3>
+
+<p>Next view the instructions:</p><ol class="code-line">
+<li>TO MAKE THE BIGA: At least 1 day before cooking the muffins, combine the flour, water, and yeast in a small bowl to make a sticky dough. Cover tightly with plastic wrap and refrigerate for at least 12 hours or up to 24 hours. The biga will rise slightly.</li>
+<li>TO MAKE THE DOUGH: Combine the biga, water, yeast, olive oil, and salt in the bowl of a stand mixer. Affix the bowl to the mixer and fit with the paddle attachment. Mix on low speed until the mixture looks creamy, about 1 minute. Mix in 3 cups/435 g of the flour to make a soft, sticky dough. Turn off the mixer, cover the bowl with plastic wrap, and let stand for 20 minutes. (To make by hand, combine the water, biga, yeast, oil, and salt in a large bowl and break up the biga with a wooden spoon. Stir until the biga dissolves. Mix in enough flour to make a cohesive but tacky dough. Cover and let stand for 20 minutes.)</li>
+<li>Mix in enough of the remaining flour to make a soft dough that barely cleans the mixer bowl. Replace the paddle with the dough hook. Knead on medium-low speed (if the dough climbs up the hook, just pull it down) until the dough is smooth and elastic, about 8 minutes. Turn out the dough onto a lightly floured work surface to check its texture. It should feel tacky but not stick to the work surface. (To make by hand, knead on a floured work surface, adding more flour as necessary, until the dough is smooth and feels tacky, about 10 minutes.)</li>
+<li>Shape the dough into a ball. Oil a medium bowl. Put the dough in the bowl and turn to coat with oil, leaving the dough smooth-side up. Cover with plastic wrap. Let stand in a warm place until almost doubled in volume, about 2 hours. (The dough can also be refrigerated for 8 to 12 hours. Let stand at room temperature for 1 hour before proceeding to the next step.)</li>
+<li>Using a bowl scraper, scrape the dough out of the bowl onto a lightly floured work surface. Cut into twelve equal pieces. Shape each into a 4-in/10-cm round. Sprinkle an even layer of cornmeal over a half-sheet pan. Place the rounds on the cornmeal about 1 in/2.5 cm apart. Turn the rounds to coat both sides with cornmeal. Loosely cover the pan with plastic wrap. Let stand in a warm place until the rounds have increased in volume by half and a finger pressed into a round leaves an impression for a few seconds before filling up, about 1 hour.</li>
+<li>Melt 2 Tbsp of the clarified butter in a large, heavy skillet (preferably cast-iron) over medium heat until melted and hot, but not smoking. In batches, add the dough rounds to the skillet. Cook, adjusting the heat as needed so the muffins brown without scorching, adding more clarified butter as needed. The undersides should be nicely browned, about 6 minutes. Turn and cook until the other sides are browned, and the muffins are puffed, about 6 minutes more. Transfer to a paper towel–lined half-sheet pan and let cool. (It will be tempting to eat these hot off the griddle but let them stand for at least 20 minutes to complete the cooking with carry-over heat.) Repeat with the remaining muffins, wiping the cornmeal out of the skillet with paper towels and adding more clarified butter as needed.</li>
+<li>Split each muffin in half horizontally with a serrated knife. Toast in a broiler or toaster oven (they may be too thick for a standard toaster) until lightly browned. Serve hot. (The muffins can be stored in an airtight container at room temperature for up to 2 days.)
+There are 7 steps, so this time an ordered list will be the best for the task. The advantage of the ordered list is we do not have to manually enter the item number. The browser will calculate each item as it renders it to the screen. This makes adding and subtracting to the list quite easy especially later in JavaScript. The number scheme has a default numbering type with 1,2,3,etc. but this can be changed later through CSS.</li>
+</ol>
+<p>After the Dough portion add an unordered list and 7 list items.</p><p><h3><code>&lt;ol&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;/ol&gt;</code></h3>
+
+<p>Now delete what you just wrote and try the emmet abbrivation do to the same thing: Type:</p><p><h3><code>ol&gt;li*7</code></h3>
+
+<p>This will create an <code>&lt;ol&gt; ... &lt;/ol&gt;</code> with 7 <code>&lt;li&gt;&lt;/li&gt;</code> inside.</p><p>Next, copy/paste the first step of the directions removing the leading 1.</p><p><h3><code>&lt;li&gt;TO MAKE THE BIGA: At least 1 day before cooking the muffins, combine the flour, water, and yeast in a small bowl to make a sticky dough. Cover tightly with plastic wrap and refrigerate for at least 12 hours or up to 24 hours. The biga will rise slightly.&lt;/li&gt;</code></h3>
+
+<p>Then add the remaining 6 steps.</p><p>View your result. While the webpage shows everything you need to make this recipe, we can improve the readability of the work by adding a nested list. This is a list inside of a list.</p><p>Replace the first line of the directions with:</p><p><h3><code>&lt;li&gt;TO MAKE THE BIGA: &lt;ul&gt;&lt;li&gt;At least 1 day before cooking the muffins, combine the flour, water, and yeast in a small bowl to make a sticky dough. &lt;/li&gt;</code></h3>
+<h3><code> &lt;li&gt; Cover tightly with plastic wrap and refrigerate for at least 12 hours or up to 24 hours. The biga will rise slightly.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;</code></h3>
+
+<p>Finish the remaining steps. Take your time and fix any error you will probably make.</p><p><h3><code>&lt;ol&gt;</code></h3>
+<h3><code>&lt;li&gt;TO MAKE THE BIGA: &lt;ul&gt;&lt;li&gt;At least 1 day before cooking the muffins, combine the flour, water, and yeast in a small bowl to make a sticky dough. &lt;/li&gt;</code></h3>
+<h3><code> &lt;li&gt; Cover tightly with plastic wrap and refrigerate for at least 12 hours or up to 24 hours. The biga will rise slightly.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;</code></h3>
+<h3></h3>
+<h3></h3>
+<h3><code>&lt;li&gt;TO MAKE THE DOUGH: &lt;ul&gt;&lt;li&gt;Combine the biga, water, yeast, olive oil, and salt in the bowl of a stand mixer. &lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Affix the bowl to the mixer and fit with the paddle attachment. Mix on low speed until the mixture looks creamy, about 1 minute.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Mix in 3 cups/435 g of the flour to make a soft, sticky dough. Turn off the mixer, cover the bowl with plastic wrap, and let stand for 20 minutes.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;(To make by hand, combine the water, biga, yeast, oil, and salt in a large bowl and break up the biga with a wooden spoon. Stir until the biga dissolves. Mix in enough flour to make a cohesive but tacky dough. Cover and let stand for 20 minutes.)&lt;/li&gt;</code></h3>
+<h3><code>    &lt;/ul&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;ul&gt;&lt;li&gt;Mix in enough of the remaining flour to make a soft dough that barely cleans the mixer bowl.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Replace the paddle with the dough hook. Knead on medium-low speed (if the dough climbs up the hook, just pull it down) until the dough is smooth and elastic, about 8 minutes.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Turn out the dough onto a lightly floured work surface to check its texture. It should feel tacky but not stick to the work surface. &lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;(To make by hand, knead on a floured work surface, adding more flour as necessary, until the dough is smooth and feels tacky, about 10 minutes.)&lt;/li&gt;</code></h3>
+<h3><code>    &lt;/ul&gt;&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;&lt;ul&gt;&lt;li&gt;Shape the dough into a ball. &lt;/li&gt;</code></h3>
+<h3><code>        &lt;li&gt;Oil a medium bowl. Put the dough in the bowl and turn to coat with oil, leaving the dough smooth-side up. &lt;/li&gt;</code></h3>
+<h3><code>        &lt;li&gt;Cover with plastic wrap. Let stand in a warm place until almost doubled in volume, about 2 hours.&lt;/li&gt;</code></h3>
+<h3><code>        &lt;li&gt;(The dough can also be refrigerated for 8 to 12 hours. Let stand at room temperature for 1 hour before proceeding to the next step.)&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;ul&gt;&lt;li&gt;Using a bowl scraper, scrape the dough out of the bowl onto a lightly floured work surface. Cut into twelve equal pieces. Shape each into a 4-in/10-cm round.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Sprinkle an even layer of cornmeal over a half-sheet pan. Place the rounds on the cornmeal about 1 in/2.5 cm apart. &lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Turn the rounds to coat both sides with cornmeal. Loosely cover the pan with plastic wrap.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Let stand in a warm place until the rounds have increased in volume by half and a finger pressed into a round leaves an impression for a few seconds before filling up, about 1 hour.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;li&gt;&lt;ul&gt;&lt;li&gt;Melt 2 Tbsp of the clarified butter in a large, heavy skillet (preferably cast-iron) over medium heat until melted and hot, but not smoking.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;In batches, add the dough rounds to the skillet. Cook, adjusting the heat as needed so the muffins brown without scorching, adding more clarified butter as needed. The undersides should be nicely browned, about 6 minutes.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Turn and cook until the other sides are browned, and the muffins are puffed, about 6 minutes more.&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Transfer to a paper towel–lined half-sheet pan and let cool. (It will be tempting to eat these hot off the griddle but let them stand for at least 20 minutes to complete the cooking with carry-over heat).&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;Repeat with the remaining muffins, wiping the cornmeal out of the skillet with paper towels and adding more clarified butter as needed.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;</code></h3>
+<h3><code>    &lt;li&gt;&lt;ul&gt;&lt;li&gt;Split each muffin in half horizontally with a serrated knife.&lt;/li&gt;</code></h3>
+<h3><code>        &lt;li&gt;Toast in a broiler or toaster oven (they may be too thick for a standard toaster) until lightly browned. Serve hot.&lt;/li&gt;</code></h3>
+<h3><code>        &lt;li&gt;(The muffins can be stored in an airtight container at room temperature for up to 2 days.)&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;</code></h3>
+<h3><code>&lt;/ol&gt;</code></h3>
+
+<p>There is a rather funny structure. Since we have text for item number one and two but no more, the recipe does not look balanced. We can come up with a new design using unordered and ordered list, or we can add some simple labels. Make these changes in the correct place:</p><p><h3><code>&lt;li&gt;KNEADING THE DOUGH:&lt;ul&gt;&lt;li&gt;Mix in enough of the remaining flour to make a soft dough that barely cleans the mixer bowl.&lt;/li&gt;</code></h3>
+
+<p>And</p><p><h3><code>       &lt;li&gt;SHAPING THE DOUGH:&lt;ul&gt;&lt;li&gt;Shape the dough into a ball. &lt;/li&gt;</code></h3>
+
+<p>And</p><p><h3><code>&lt;li&gt;RISING THE DOUGH:&lt;ul&gt;&lt;li&gt;Using a bowl scraper, scrape the dough out of the bowl onto a lightly floured work surface. Cut into twelve equal pieces. Shape each into a 4-in/10-cm round.&lt;/li&gt;</code></h3>
+
+<p>And</p><p><h3><code>&lt;li&gt;COOKING THE MUFFINS:&lt;ul&gt;&lt;li&gt;Melt 2 Tbsp of the clarified butter in a large, heavy skillet (preferably cast-iron) over medium heat until melted and hot, but not smoking.&lt;/li&gt;</code></h3>
+
+<p>And</p><p><h3><code>       &lt;li&gt;REHEATING THE MUFFINS:&lt;ul&gt;&lt;li&gt;Split each muffin in half horizontally with a serrated knife.&lt;/li&gt;</code></h3>
+
+<p>Now add a title at the beginning of the body. Remember to use the special character for the quote.</p><p><h3><code>   &lt;h1&gt;Model Bakery&amp;rsquo;s English Muffins&lt;/h1&gt;</code></h3>
+
+<h2>Clarified Butter</h2>
+<p>If you notice the recipe calls for clarified butter. While we do not want this second recipe directly in the middle of the muffin’s recipe, we still want to create a hyperlink for the mention of clarified butter to a new webpage.
+Create a new html document name butter.html. Create a title, build the webpage like we did for the muffins but instead use the following recipe:</p><p>CLARIFIED BUTTER</p><p>Our decadent English muffins are cooked in butter, a great cooking medium with one major drawback—the milk solids in butter burn easily. Clarifying the butter is an easy process that removes the milk solids. Leftover clarified butter can be used like oil for saut&#233;ing food. It keeps for a few weeks in a refrigerated covered container.</p><p>MAKES ABOUT &#190; CUP/180 ML</p><p>1 lb/455 g unsalted butter, cut up</p><ol class="code-line">
+<li>Melt the butter in a small saucepan over medium heat until completely melted and boiling. Cook until the butter stops sputtering, about 1 minute. Remove from the heat and let stand for 5 minutes. Skim the foam from the surface of the butter.</li>
+<li>Line a wire sieve with dampened, wrung-out cheesecloth and place over a medium bowl. Carefully pour the clear, yellow melted butter through the sieve, leaving the milky residue behind in the saucepan. (Discard the residue.) Pour into a small container and cover. Refrigerate until ready to use.</li>
+</ol>
+<p>Once you have created the butter.html webpage, create a hyperlink using the <code>&lt;a&gt;</code> tag from the muffins.html to the butter.html. Make sure you keep the two files together and check that the link works.</p><p>Save both the <b>muffins.html</b> and <b>butter.html</b> file. These will be built on more during the semester. Submit your files to HTML Lab - Part 2. Upload your files to GitHub.</p>
+
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p>
+
+<script type="module" src="https://s.brightspace.com/lib/bsi/2025.1.237/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+						if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+							document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+								elm.setAttribute('style', 'display: block; height: 0.5rem;');
+							});
+
+							window.D2L.MathJax.loadMathJax({
+								outputScale: 1.5,
+								renderLatex: false,
+								enableMML3Support: false
+							});
+						}
+					});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2025.1.237/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code);
+					});
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2025.1.237/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					window.D2L.EmbedRenderer.renderEmbeds(document.body);
+				});</script></body></html>
