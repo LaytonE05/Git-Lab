@@ -3,38 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risotto</title>
+    <title>Risotto Recipe</title>
     <style>
+
         body {
+            font-family: "Georgia", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2b2b2b; 
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+        }
+
+        .outer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px; 
+            background-color: pink;
+        }
+
+        
+        .inner-container {
+            background-color: rgba(240, 240, 240, 0.9); /* Grey film background */
+            padding: 60px;
+            border: 5px solid red;
+            width: 95vw; 
+            height: 95vh; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        
+        .curved-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
         }
         svg {
-            width: 300px;
-            height: 300px;
+            width: 350px;
+            height: 120px;
         }
         text {
-            font-family: Arial, sans-serif;
-            font-size: 24px;
+            font-family: "Georgia", serif;
+            font-size: 32px;
             font-weight: bold;
-            fill: #333;
+            fill: #222;
         }
+
+       
+        .description {
+            text-align: justify;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 22px;
+            line-height: 1.8;
+        }
+
+       
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+            font-weight: bold;
+            gap: 30px;
+            max-width: 800px;
+            margin: 30px auto;
+            font-size: 24px;
+        }
+
+       
+        .ingredients {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        .ingredients li {
+            margin-bottom: 10px;
+        }
+
+        
+        .line {
+            border-top: 3px solid black;
+            margin: 30px auto;
+            width: 85%;
+        }
+
     </style>
 </head>
 <body>
-    <svg viewBox="0 0 200 200">
-        <defs>
-            <path id="circlePath" d="M50,100a50,50 0 1,1 100,0a50,50 0 1,1 -100,0" />
-        </defs>
-        <text transform="rotate(-90 100 100)">
-            <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
-                Risotto
-            </textPath>
-        </text>
-    </svg>
+
+<div class="outer-container">
+    <div class="inner-container">
+
+       
+        <div class="curved-text">
+            <svg viewBox="0 0 200 100">
+                <defs>
+                    <path id="curvePath" d="M 50,80 A 50,50 0 0,1 150,80" />
+                </defs>
+                <text>
+                    <textPath href="#curvePath" startOffset="50%" text-anchor="middle">
+                        RISOTTO
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+
+        <p class="description">
+            Risotto is a dish from northern Italy made with rice and stock (a liquid flavored with ingredients such as vegetables or chicken). 
+            The most important ingredient is good quality risotto rice, ideally carnaroli or vialone nano, both of which are available from good food shops. 
+            When cooked, this rice has a firm texture as well as a creamy softness. This may be hard to imagine, but when you have cooked a good risotto, you’ll see what I mean.
+        </p>
+
+        <p class="description">
+            Once you know how to make a basic risotto, you can add other ingredients, like vegetables or meat. In Milan, risotto is made with saffron, 
+            which adds a beautiful golden color.
+        </p>
+
+        <div class="line"></div> <!-- Line above info section -->
+
+        <div class="info">
+            <div>
+                <p>SERVES</p>
+                <p>4</p>
+            </div>
+            <div>
+                <p>PREPARATION TIME</p>
+                <p>10 minutes</p>
+            </div>
+            <div>
+                <p>COOKING TIME</p>
+                <p>40 minutes</p>
+            </div>
+        </div>
+
+        <div class="line"></div> 
+        <ul class="ingredients">
+            <li>1&frac12; ounces Parmesan cheese</li>
+            <li>5&ndash;6&frac12; cups vegetable or chicken stock (if you are not using fresh stock, use a good vegetable bouillon powder)</li>
+            <li>1 onion</li>
+            <li>3 tablespoons sweet butter</li>
+            <li>1 tablespoon olive oil</li>
+            <li>Scant 1&frac12; cups risotto rice</li>
+            <li>&frac12; teaspoon saffron threads</li>
+        </ul>
+
+    </div>
+</div>
+
 </body>
 </html>
